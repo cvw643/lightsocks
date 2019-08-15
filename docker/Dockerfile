@@ -1,8 +1,8 @@
 FROM alpine:3.7
 
-LABEL maintainer="mritd <mritd1234@gmail.com>"
+LABEL maintainer="yorkh <13691229097@163.com>"
 
-ARG TZ="Asia/Shanghai"
+ARG TZ="Asia/Beijing"
 
 ENV TZ ${TZ}
 ENV LIGHTSOCKS_VERSION 1.0.6
@@ -20,7 +20,7 @@ RUN apk upgrade --update \
             readme.md \
             /var/cache/apk/*
 
-COPY .lightsocks.json /root/.lightsocks.json
-COPY entrypoint.sh /entrypoint.sh
+COPY docker/.lightsocks.json /root/.lightsocks.json
+COPY docker/entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
