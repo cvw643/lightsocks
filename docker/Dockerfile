@@ -20,7 +20,7 @@ RUN apk upgrade --update \
             readme.md \
             /var/cache/apk/*
 
-COPY docker/.lightsocks.json /root/.lightsocks.json
-COPY docker/entrypoint.sh /entrypoint.sh
+COPY .lightsocks.json /root/.lightsocks.json
+COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
