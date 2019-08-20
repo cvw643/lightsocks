@@ -23,4 +23,6 @@ RUN apk upgrade --update \
 COPY .lightsocks.json /root/.lightsocks.json
 COPY entrypoint.sh /entrypoint.sh
 
+EXPOSE 43413
+
 ENTRYPOINT ["/entrypoint.sh"]
